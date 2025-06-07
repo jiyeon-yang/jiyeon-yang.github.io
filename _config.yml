@@ -23,9 +23,9 @@ repository               : "jiyeon-yang/jiyeon-yang.github.io"
 author:
   # Biographic information
   avatar           : "jy_profile.jpg"
-  name             : "Jiyeon (Jin) Yang"
+  name             : "Jiyeon Yang"
   pronouns         : "she/her"  
-  bio              : "Research interest in Neuroscience /n Graduate Student in Biomedical Engineering"
+  bio              : "Research interest in Neuroscience"\n "Graduate Student in Biomedical Engineering"
   location         : "Earth"
   employer         : "Yale University"
   uri              : # URL
