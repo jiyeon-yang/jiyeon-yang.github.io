@@ -22,7 +22,7 @@ repository               : "jiyeon-yang/jiyeon-yang.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "![Image](https://github.com/user-attachments/assets/5cf715ba-a36c-437f-a16c-1e1c963c6171)"
+  avatar           : "jy_profile.jpg"
   name             : "Jiyeon (Jin) Yang"
   pronouns         : "she/her"  
   bio              : "Research interest in Neuroscience /n Graduate Student in Biomedical Engineering"
