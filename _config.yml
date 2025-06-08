@@ -25,11 +25,13 @@ author:
   avatar           : "jy_profile.jpg"
   name             : "Jiyeon Yang"
   pronouns         : "she/her"  
-  bio              : "Research interest in Neuroscience"\n "Graduate Student in Biomedical Engineering"
-  location         : "Earth"
+  bio              : |
+                    Graduate student in Neuroscience  
+                    Interested in neural coding and computation
+  location         : "New Haven, CT"
   employer         : "Yale University"
   uri              : # URL
-  email            : "jiyeon.yang@yale.edu /n or jiyny@snu.ac.kr" 
+  email            : "jiyeon.yang@yale.edu" 
 
   # Academic websites
   # academia         : # URL
