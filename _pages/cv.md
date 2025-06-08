@@ -6,12 +6,26 @@ author_profile: true
 ## redirect_from:
 ##  - /resume
 ---
+Research Interest
+======
+I am passionate about neuroscience research, particularly in understanding how neurons respond and compute. 
+Using rodent models, I apply neural recording techniques and computational modeling to analyze and interpret neural activity.
+
+Education
+======
+* Currently a Ph.D studnet at Yale University
+* M.S. in Seoul National University, 2025
+* B.S. in Hanyang University, 2023
+
+CV Updated in May 2025
+======
 <iframe src="{{ site.baseurl }}/files/cv.pdf" width="100%" height="800px" style="border: none;">
     This browser does not support PDFs. Please download the PDF to view it:
     <a href="{{ site.baseurl }}/files/cv.pdf">Download PDF</a>.
 </iframe>
 
-<!-- Not using -->
+
+<!-- NOT USING 
 
 {% include base_path %}
 
@@ -68,3 +82,4 @@ Teaching
 Service and leadership
 ======
 * Currently signed in to 43 different slack teams
+-->
