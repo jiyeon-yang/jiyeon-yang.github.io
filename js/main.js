@@ -52,13 +52,12 @@
 /* ---------- PHOTO SLIDER ----------
    Edit the `caption` text for each photo below. */
 const PHOTOS = [
-  { src: "assets/photo1.jpg", caption: "Coffee break during a conference" },
-  { src: "assets/photo2.jpg", caption: "Exploring the city between sessions" },
-  { src: "assets/photo3.jpg", caption: "BCS Brain Day" },
-  { src: "assets/photo4.jpg", caption: "Presenting my poster" },
-  { src: "assets/photo5.jpg", caption: "Museum visit" },
-  { src: "assets/photo6.jpg", caption: "Giving a talk on visual processing in the retrosplenial cortex" },
-  { src: "assets/photo7.jpg", caption: "With the lab" }
+  { src: "assets/photo3.jpg", caption: "Poster presentation at Cosyne 2025" },
+  { src: "assets/photo2.jpg", caption: "My master's lab photo!" },
+  { src: "assets/photo4.jpg", caption: "Mill River kayaking" },
+  { src: "assets/photo6.jpg", caption: "BME SI presentation" },
+  { src: "assets/photo5.jpg", caption: "New York" },
+  { src: "assets/photo7.jpg", caption: "My current lab!" }
 ];
 
 (function slider() {
