@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jiyeon Yang — Neuroscience PhD, Yale</title>
+  <meta name="description" content="Jiyeon Yang — PhD student in Biomedical Engineering at Yale University. Systems & computational neuroscience across micro, meso, and macro scales." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand">
+      <span class="nav__mark">JY</span>
+      <span class="nav__name">Jiyeon&nbsp;Yang</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle light / dark">
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g stroke-width="1.8"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="5.2" y1="5.2" x2="7" y2="7"/><line x1="17" y1="17" x2="18.8" y2="18.8"/><line x1="18.8" y1="5.2" x2="17" y2="7"/><line x1="7" y1="17" x2="5.2" y2="18.8"/></g></svg>
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.4 6.4 0 0 0 10.5 10.5z"/></svg>
+    </button>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <canvas class="hero__canvas" id="neuralCanvas" aria-hidden="true"></canvas>
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="hero__eyebrow">// SYSTEMS &amp; COMPUTATIONAL NEUROSCIENCE</p>
+        <h1 class="hero__name">Jiyeon Yang</h1>
+        <p class="hero__title">PhD Student, Biomedical Engineering · Yale University</p>
+        <p class="hero__sub">From synapses to whole-brain networks — decoding how sensory information becomes behavior and cognition.</p>
+        <div class="hero__cta">
+          <a href="#research" class="btn btn--primary">Explore my research</a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+        <div class="hero__scales" aria-hidden="true">
+          <span class="chip chip--micro">µm · micro</span>
+          <span class="chip chip--meso">mm · meso</span>
+          <span class="chip chip--macro">cm · macro</span>
+        </div>
+      </div>
+      <div class="hero__portrait">
+        <div class="portrait" data-img="assets/profile.jpg">
+          <img src="assets/profile.jpg" alt="Portrait of Jiyeon Yang" onerror="this.parentNode.classList.add('portrait--empty');this.remove();" />
+          <span class="portrait__placeholder">Add <code>assets/profile.jpg</code></span>
+          <span class="portrait__ring"></span>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="hero__scroll" aria-label="Scroll to about">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="section__head">
+      <span class="section__index">01</span>
+      <h2 class="section__title">About</h2>
+    </div>
+    <div class="about__grid">
+      <div class="about__bio">
+        <p>
+          I am a Ph.D. student in the Department of Biomedical Engineering at Yale University,
+          advised by Professor <a href="https://www.higleylab.org/" target="_blank" rel="noopener">Michael Higley</a>.
+          I am interested in understanding how sensory information is transformed into behavior and cognition
+          through neuroimaging and computational approaches. I am also a
+          <a href="https://wti.yale.edu/initiatives/graduate-fellowships" target="_blank" rel="noopener">Wu Tsai Graduate Fellow</a>.
+        </p>
+        <ul class="about__facts">
+          <li><span class="about__facts-k">Focus</span><span class="about__facts-v">Neuroimaging &amp; computational neuroscience</span></li>
+          <li><span class="about__facts-k">Scales</span><span class="about__facts-v">Synapse → circuit → whole brain</span></li>
+          <li><span class="about__facts-k">Fellowship</span><span class="about__facts-v">Wu Tsai Graduate Fellow, 2026–2029</span></li>
+        </ul>
+      </div>
+      <div class="about__gallery" id="gallery" aria-label="Photo gallery">
+        <!-- Drop your photos in assets/photos/ as photo1.jpg ... photo4.jpg -->
+        <figure class="gphoto" data-src="assets/photos/photo1.jpg"></figure>
+        <figure class="gphoto" data-src="assets/photos/photo2.jpg"></figure>
+        <figure class="gphoto" data-src="assets/photos/photo3.jpg"></figure>
+        <figure class="gphoto" data-src="assets/photos/photo4.jpg"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESEARCH / SCALE EXPLORER ===== -->
+  <section class="section research" id="research">
+    <div class="section__head">
+      <span class="section__index">02</span>
+      <h2 class="section__title">Research</h2>
+      <p class="section__lead">Drag the probe across spatial scales — from synapses imaged in electron microscopy, through cortical circuits, to whole-brain networks.</p>
+    </div>
+
+    <div class="explorer" id="explorer">
+      <!-- Visualization stage -->
+      <div class="explorer__stage">
+        <canvas class="explorer__viz" id="vizCanvas" aria-hidden="true"></canvas>
+        <div class="explorer__readout">
+          <span class="explorer__scale-label" id="scaleLabel">MICRO</span>
+          <span class="explorer__scale-unit" id="scaleUnit">~1 µm · synaptic</span>
+        </div>
+      </div>
+
+      <!-- Slider -->
+      <div class="scalebar">
+        <div class="scalebar__track" id="scaleTrack">
+          <div class="scalebar__fill" id="scaleFill"></div>
+          <button class="scalebar__handle" id="scaleHandle" role="slider"
+                  aria-valuemin="0" aria-valuemax="2" aria-valuenow="0"
+                  aria-label="Research scale" tabindex="0"></button>
+        </div>
+        <div class="scalebar__stops">
+          <button class="stop stop--micro" data-scale="0"><span class="stop__icon">◌</span><span class="stop__name">Micro</span><span class="stop__unit">µm</span></button>
+          <button class="stop stop--meso"  data-scale="1"><span class="stop__icon">◍</span><span class="stop__name">Meso</span><span class="stop__unit">mm</span></button>
+          <button class="stop stop--macro" data-scale="2"><span class="stop__icon">◉</span><span class="stop__name">Macro</span><span class="stop__unit">cm</span></button>
+        </div>
+      </div>
+
+      <!-- Project panel -->
+      <div class="explorer__panel" id="projectPanel" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- ===== PUBLICATIONS ===== -->
+  <section class="section pubs" id="publications">
+    <div class="section__head">
+      <span class="section__index">03</span>
+      <h2 class="section__title">Publications &amp; Presentations</h2>
+    </div>
+
+    <h3 class="pubs__subhead">Publication</h3>
+    <ul class="pubs__list">
+      <li class="pub">
+        <p class="pub__cite">
+          Daehyun Oh<sup>✝</sup>, <strong>Jiyeon Yang</strong><sup>✝</sup>, Jaehan Shin, &amp; Jeehyun Kwag<sup>*</sup>.
+          “Retrosplenial PV and SST interneurons shape egocentric spatial precision and stability.”
+        </p>
+        <p class="pub__meta"><span class="tag">Submitted</span><span class="pub__note">✝ co-first authors</span></p>
+      </li>
+    </ul>
+
+    <h3 class="pubs__subhead">Presentations</h3>
+    <ul class="pubs__list">
+      <li class="pub">
+        <p class="pub__cite"><strong>Yang, J.</strong>, Kwag, J. “Retrosplenial Parvalbumin Interneurons Gate the Egocentric Vector Coding of Environmental Geometry.”</p>
+        <p class="pub__meta"><span class="tag tag--alt">Cosyne</span> Montreal, Canada · Poster · Mar 29, 2025</p>
+      </li>
+      <li class="pub">
+        <p class="pub__cite"><strong>Yang, J.</strong>, Kwag, J. “Egocentric vector coding of geometric vertex by parvalbumin interneurons in the retrosplenial cortex.”</p>
+        <p class="pub__meta"><span class="tag tag--alt">KSBNS</span> Gyeongju, South Korea · Poster · Oct 15, 2024</p>
+      </li>
+      <li class="pub">
+        <p class="pub__cite"><strong>Yang, J.</strong>, Kwag, J. “The effect of inhibitory short-term plasticity on the propagation of spike synchrony in a feedforward network model.”</p>
+        <p class="pub__meta"><span class="tag tag--alt">SfN</span> Washington D.C., USA · Poster · Nov 12, 2023</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===== CV ===== -->
+  <section class="section cv" id="cv">
+    <div class="section__head">
+      <span class="section__index">04</span>
+      <h2 class="section__title">CV</h2>
+    </div>
+
+    <div class="cv__grid">
+      <article class="cv__block">
+        <h3>Education</h3>
+        <ul class="timeline">
+          <li><span class="timeline__when">2025 – Current</span><div><strong>Yale University</strong><br/>Ph.D. in Biomedical Engineering<br/><em>Certificate in Brains, Minds, and Machines</em></div></li>
+          <li><span class="timeline__when">2023 – 2025</span><div><strong>Seoul National University</strong><br/>M.S. in Brain and Cognitive Sciences · GPA 4.0/4.0</div></li>
+          <li><span class="timeline__when">2018 – 2023</span><div><strong>Hanyang University</strong><br/>B.S. in Biomedical Engineering · GPA 3.94/4.0, Highest Honors<br/><em>Minor in BIO-SW Engineering</em></div></li>
+        </ul>
+      </article>
+
+      <article class="cv__block">
+        <h3>Honors &amp; Awards</h3>
+        <ul class="award-list">
+          <li><span>Wu Tsai Graduate Fellowship</span><span class="muted">2026–2029</span></li>
+          <li><span>Cosyne Attendee Travel Grant</span><span class="muted">2023</span></li>
+          <li><span>BCS Outstanding Research Talent Fellowship ($5,500)</span><span class="muted">2023</span></li>
+          <li><span>Summa Cum Laude with Highest Honors</span><span class="muted">2023</span></li>
+          <li><span>Dean's List — Ranked 1st in Engineering</span><span class="muted">2023</span></li>
+          <li><span>Academic Excellence Scholarship ($12,000)</span><span class="muted">2019–2022</span></li>
+        </ul>
+      </article>
+
+      <article class="cv__block">
+        <h3>Teaching</h3>
+        <ul class="plain-list">
+          <li><strong>TA · Computational Neuroscience</strong> — SNU, Brain &amp; Cognitive Sciences <span class="muted">(Spring 2024, 2025)</span></li>
+          <li><strong>TA · Understanding the Brain as a Complex System</strong> — SNU, Liberal Education <span class="muted">(Fall 2023)</span></li>
+          <li><strong>Research Mentorship</strong> — SNU NS &amp; BCS Summer Internships, International Student BCS Workshop <span class="muted">(2023–2024)</span></li>
+        </ul>
+      </article>
+
+      <article class="cv__block">
+        <h3>Leadership &amp; Activities</h3>
+        <ul class="plain-list">
+          <li>Student Council — SNU <span class="muted">(2023–2024)</span> · Hanyang <span class="muted">(2020–2021)</span></li>
+          <li>BCS Community Member — SNU <span class="muted">(2021–2022)</span></li>
+          <li>Biomedical Engineering Student Ambassador <span class="muted">(2020–2021)</span></li>
+          <li>Appropriate Technology Union for Students (ATUS) <span class="muted">(2020–2021)</span></li>
+        </ul>
+      </article>
+
+      <article class="cv__block cv__block--wide">
+        <h3>Skills &amp; Techniques</h3>
+        <div class="skills">
+          <div class="skills__group"><span class="skills__k">Programming</span><div class="skills__tags"><span>Python</span><span>MATLAB</span></div></div>
+          <div class="skills__group"><span class="skills__k">Experimental</span><div class="skills__tags"><span>Calcium imaging (1p &amp; 2p)</span><span>Optogenetics</span></div></div>
+          <div class="skills__group"><span class="skills__k">Computational</span><div class="skills__tags"><span>PyTorch</span><span>NEURON</span><span>NetPyNE</span></div></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / FOOTER ===== -->
+  <footer class="section contact" id="contact">
+    <div class="section__head">
+      <span class="section__index">05</span>
+      <h2 class="section__title">Contact</h2>
+    </div>
+    <p class="contact__lead">Always happy to talk neuroscience, collaborations, or imaging methods.</p>
+    <div class="contact__links">
+      <a class="contact__link" href="mailto:jiyeon.yang@yale.edu">
+        <span class="contact__icon">✉</span>
+        <span><span class="contact__k">Email</span>jiyeon.yang@yale.edu</span>
+      </a>
+      <!-- TODO: replace href with your full LinkedIn profile URL -->
+      <a class="contact__link" href="https://www.linkedin.com/in/jiyeon-yang" target="_blank" rel="noopener">
+        <span class="contact__icon">in</span>
+        <span><span class="contact__k">LinkedIn</span>Jiyeon Yang</span>
+      </a>
+      <!-- Future add-ons (enable by un-commenting + filling href):
+      <a class="contact__link" href="#"><span class="contact__icon">G</span><span><span class="contact__k">Scholar</span>Google Scholar</span></a>
+      <a class="contact__link" href="https://github.com/jiyeon-yang" target="_blank" rel="noopener"><span class="contact__icon">⌥</span><span><span class="contact__k">GitHub</span>jiyeon-yang</span></a>
+      -->
+    </div>
+    <p class="footer__legal">© <span id="year"></span> Jiyeon Yang · Built with vanilla HTML, CSS &amp; JS.</p>
+  </footer>
+
+  <script src="js/scales.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
