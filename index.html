@@ -85,12 +85,17 @@
           <li><span class="about__facts-k">Fellowship</span><span class="about__facts-v">Wu Tsai Graduate Fellow, 2026–2029</span></li>
         </ul>
       </div>
-      <div class="about__gallery" id="gallery" aria-label="Photo gallery">
-        <!-- Drop your photos in assets/photos/ as photo1.jpg ... photo4.jpg -->
-        <figure class="gphoto" data-src="assets/photos/photo1.jpg"></figure>
-        <figure class="gphoto" data-src="assets/photos/photo2.jpg"></figure>
-        <figure class="gphoto" data-src="assets/photos/photo3.jpg"></figure>
-        <figure class="gphoto" data-src="assets/photos/photo4.jpg"></figure>
+      <!-- Photo slider. Captions are editable in js/main.js (PHOTOS array). -->
+      <div class="slider" id="photoSlider" aria-roledescription="carousel" aria-label="Photo gallery">
+        <div class="slider__stage">
+          <button class="slider__nav slider__nav--prev" id="slidePrev" aria-label="Previous photo">&#8249;</button>
+          <div class="slider__viewport">
+            <img class="slider__img" id="slideImg" alt="" />
+          </div>
+          <button class="slider__nav slider__nav--next" id="slideNext" aria-label="Next photo">&#8250;</button>
+        </div>
+        <p class="slider__caption" id="slideCaption" aria-live="polite"></p>
+        <div class="slider__dots" id="slideDots" role="tablist" aria-label="Choose photo"></div>
       </div>
     </div>
   </section>
@@ -239,8 +244,7 @@
         <span class="contact__icon">✉</span>
         <span><span class="contact__k">Email</span>jiyeon.yang@yale.edu</span>
       </a>
-      <!-- TODO: replace href with your full LinkedIn profile URL -->
-      <a class="contact__link" href="https://www.linkedin.com/in/jiyeon-yang" target="_blank" rel="noopener">
+      <a class="contact__link" href="https://www.linkedin.com/in/jiyeon-yang-468334312/" target="_blank" rel="noopener">
         <span class="contact__icon">in</span>
         <span><span class="contact__k">LinkedIn</span>Jiyeon Yang</span>
       </a>

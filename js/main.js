@@ -49,17 +49,75 @@
   els.forEach(el => obs.observe(el));
 })();
 
-/* ---------- GALLERY: load photos, hide missing ---------- */
-(function gallery() {
-  document.querySelectorAll(".gphoto").forEach(fig => {
-    const src = fig.dataset.src;
-    if (!src) return;
-    const img = new Image();
-    img.alt = "Photo of Jiyeon Yang";
-    img.onload = () => fig.appendChild(img);
-    img.onerror = () => fig.classList.add("is-empty");
-    img.src = src;
+/* ---------- PHOTO SLIDER ----------
+   Edit the `caption` text for each photo below. */
+const PHOTOS = [
+  { src: "assets/photo1.jpg", caption: "Coffee break during a conference" },
+  { src: "assets/photo2.jpg", caption: "Exploring the city between sessions" },
+  { src: "assets/photo3.jpg", caption: "BCS Brain Day" },
+  { src: "assets/photo4.jpg", caption: "Presenting my poster" },
+  { src: "assets/photo5.jpg", caption: "Museum visit" },
+  { src: "assets/photo6.jpg", caption: "Giving a talk on visual processing in the retrosplenial cortex" },
+  { src: "assets/photo7.jpg", caption: "With the lab" }
+];
+
+(function slider() {
+  const root = document.getElementById("photoSlider");
+  if (!root) return;
+  const img = document.getElementById("slideImg");
+  const cap = document.getElementById("slideCaption");
+  const dotsWrap = document.getElementById("slideDots");
+  const prev = document.getElementById("slidePrev");
+  const next = document.getElementById("slideNext");
+  let i = 0;
+
+  // build dots
+  const dots = PHOTOS.map((_, idx) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("role", "tab");
+    b.setAttribute("aria-label", "Photo " + (idx + 1));
+    b.addEventListener("click", () => show(idx));
+    dotsWrap.appendChild(b);
+    return b;
   });
+
+  function show(n) {
+    i = (n + PHOTOS.length) % PHOTOS.length;
+    const p = PHOTOS[i];
+    img.classList.remove("is-loaded");
+    img.onload = () => img.classList.add("is-loaded");
+    img.onerror = () => { cap.innerHTML = "Missing <code>" + p.src + "</code>"; };
+    img.src = p.src;
+    img.alt = p.caption;
+    cap.innerHTML = p.caption + '<span class="slider__count">' + (i + 1) + " / " + PHOTOS.length + "</span>";
+    dots.forEach((d, idx) => {
+      d.classList.toggle("is-active", idx === i);
+      d.setAttribute("aria-selected", idx === i ? "true" : "false");
+    });
+  }
+
+  prev.addEventListener("click", () => show(i - 1));
+  next.addEventListener("click", () => show(i + 1));
+
+  // keyboard (when slider focused)
+  root.tabIndex = 0;
+  root.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") { show(i - 1); e.preventDefault(); }
+    else if (e.key === "ArrowRight") { show(i + 1); e.preventDefault(); }
+  });
+
+  // swipe
+  let x0 = null;
+  root.addEventListener("touchstart", (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+  root.addEventListener("touchend", (e) => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) show(dx < 0 ? i + 1 : i - 1);
+    x0 = null;
+  });
+
+  show(0);
 })();
 
 /* ---------- FOOTER YEAR ---------- */
